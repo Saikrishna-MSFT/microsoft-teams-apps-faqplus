@@ -156,11 +156,11 @@ namespace Microsoft.Teams.Apps.FAQPlusPlus.Bots
         {
             try
             {
-                if (turnContext != null & !this.IsActivityFromExpectedTenant(turnContext))
-                {
-                    this.logger.LogWarning($"Unexpected tenant id {turnContext?.Activity.Conversation.TenantId}");
-                    return Task.CompletedTask;
-                }
+                // if (turnContext != null & !this.IsActivityFromExpectedTenant(turnContext))
+                // {
+                //    this.logger.LogWarning($"Unexpected tenant id {turnContext?.Activity.Conversation.TenantId}");
+                //    return Task.CompletedTask;
+                // }
 
                 // Get the current culture info to use in resource files
                 string locale = turnContext?.Activity.Entities?.FirstOrDefault(entity => entity.Type == "clientInfo")?.Properties["locale"]?.ToString();
